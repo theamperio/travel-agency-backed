@@ -2,7 +2,7 @@ import express, { Application } from 'express';
 import mongoose from 'mongoose';
 import cors from 'cors';
 import dotenv from 'dotenv';
-import packageRoutes from './routes/packageRoutes';
+import packageRoutes from '../routes/packageRoutes';
 
 // Load environment variables
 dotenv.config();
