@@ -16,6 +16,7 @@ interface Amenity {
 
 // Interface for Package Document
 export interface IPackage extends Document {
+  packageId: string;  // Custom unique ID
   title: string;
   destination: string;
   description: string;
@@ -50,6 +51,12 @@ const AmenitySchema = new Schema<Amenity>({
 
 // Schema for Package
 const PackageSchema = new Schema<IPackage>({
+  packageId: { 
+    type: String, 
+    required: true,
+    unique: true,
+    default: () => `PKG-${Math.floor(100000 + Math.random() * 900000)}`
+  },
   title: { type: String, required: true },
   destination: { type: String, required: true },
   description: { type: String, required: true },
