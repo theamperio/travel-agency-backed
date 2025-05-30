@@ -9,6 +9,6 @@
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true
   },
-  "include": ["**/*.ts", "index.ts", "controllers/**/*.ts", "models/**/*.ts", "routes/**/*.ts"],
+  "include": ["**/*.ts", "index.ts", "controllers/**/*.ts", "src/models/**/*.ts", "src/routes/**/*.ts"],
   "exclude": ["node_modules"]
 }
