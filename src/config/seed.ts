@@ -1,6 +1,6 @@
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
-import Package from './models/Package';
+import Package from '../models/Package';
 
 // Load environment variables
 dotenv.config();

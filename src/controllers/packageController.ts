@@ -15,7 +15,7 @@ export const getAllPackages = async (req: Request, res: Response) => {
 export const getPackageById = async (req: Request, res: Response) => {
   try {
     const { id } = req.params;
-    const packageData = await Package.findById(id);
+    const packageData = await Package.findOne({ packageId: id });
     
     if (!packageData) {
       return res.status(404).json({ message: 'Package not found' });
